@@ -8,6 +8,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   Button,
+  Image,
   Platform,
   KeyboardAvoidingView,
   Keyboard,
@@ -26,7 +27,7 @@ const initialState = {
 export default function App() {
   const [isShowKeyboard, setIsShowKeyboard] = useState(false);
   const [state, setState] = useState(initialState);
-  const [keyboardStatus, setKeyboardStatus] = useState(false);
+  const [keyboardStatus, setKeyboardStatus] = useState(undefined);
 
   useEffect(() => {
     const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
@@ -80,13 +81,32 @@ export default function App() {
             <View
               style={{
                 ...styles.form,
-                height: keyboardStatus === "Keyboard Hidden" ? 489 : 248,
-                paddingBottom: keyboardStatus === "Keyboard Hidden" ? 144 : 0,
+                height: keyboardStatus === "Keyboard Hidden" ? 549 : 374,
+                paddingBottom: keyboardStatus === "Keyboard Hidden" ? 78 : 0,
               }}
             >
-              <View style={styles.header}>
-                <Text style={styles.inputTitle}>Войти</Text>
+              <View style={styles.containerAvatar}>
+                <View style={styles.backgroundAvatar}></View>
+                <TouchableOpacity style={styles.addAvatar}>
+                  <Image
+                    style={styles.addPhoto}
+                    source={require("./assets/Images/addPhoto.jpg")}
+                  />
+                </TouchableOpacity>
               </View>
+              <View style={styles.header}>
+                <Text style={styles.inputTitle}>Регистрация</Text>
+              </View>
+              <TextInput
+                style={styles.input}
+                placeholder={"Логин"}
+                placeholderTextColor={"#BDBDBD"}
+                onFocus={() => setIsShowKeyboard(true)}
+                value={state.login}
+                onChangeText={(value) => {
+                  setState((prevState) => ({ ...prevState, login: value }));
+                }}
+              />
               <TextInput
                 style={styles.input}
                 placeholder={"Адрес электронной почты"}
@@ -118,12 +138,12 @@ export default function App() {
                     style={styles.btn}
                     onPress={hundleSubmit}
                   >
-                    <Text style={styles.btnTitle}>Войти</Text>
+                    <Text style={styles.btnTitle}>Регистрация</Text>
                   </TouchableOpacity>
                   <Button
                     style={styles.enterTitle}
                     color={"#1B4371"}
-                    title="Нет аккаунта? Зарегистрироваться"
+                    title="Уже есть акаунт? Войти"
                   />
                 </View>
               )}
