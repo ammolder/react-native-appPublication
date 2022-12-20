@@ -21,7 +21,28 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 25,
     backgroundColor: "#ffffff",
   },
-
+  containerAvatar: {
+    position: "absolute",
+    top: -60,
+    right: "50%",
+    justifyContent: "center",
+    width: 132,
+    transform: [{ translateX: 50 }],
+  },
+  backgroundAvatar: {
+    width: 120,
+    height: 120,
+    borderRadius: 16,
+    backgroundColor: "#F6F6F6",
+  },
+  addAvatar: {
+    position: "absolute",
+    right: 0,
+    bottom: 14,
+  },
+  addPhoto: {
+    borderRadius: 100,
+  },
   header: {
     alignItems: "center",
     marginBottom: 32,
