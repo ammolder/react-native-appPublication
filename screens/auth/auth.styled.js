@@ -73,7 +73,16 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FF6C00",
     borderRadius: 100,
   },
-  enterTitle: {},
+  enter: {
+    marginLeft: "auto",
+    marginRight: "auto",
+    alignContent: "center",
+  },
+  enterTitle: {
+    fontFamily: "Roboto-Regular",
+    fontSize: 16,
+    color: "#1B4371",
+  },
   containerPhoto: {
     width: 132,
   },
