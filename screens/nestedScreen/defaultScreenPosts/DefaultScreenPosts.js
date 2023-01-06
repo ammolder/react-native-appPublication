@@ -65,7 +65,7 @@ const DefaultScreenPosts = ({ route, navigation }) => {
                     disabled={false}
                     activeOpacity={0.7}
                     onPress={() => {
-                      navigation.navigate("Map");
+                      navigation.navigate("Map", item.location);
                     }}
                   >
                     <Text style={styles.textLocation}>{item.place}</Text>

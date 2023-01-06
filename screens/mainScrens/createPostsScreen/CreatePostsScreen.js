@@ -52,10 +52,11 @@ const CreateScreen = ({ navigation }) => {
     setPhoto(photo.uri);
   };
   const sendPhoto = async () => {
-    navigation.navigate("PostsScreen", {
+    navigation.navigate("DefaultScreen", {
       photo,
       description,
       place,
+      location,
     });
 
     setPhoto(null);
