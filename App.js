@@ -8,8 +8,10 @@ import * as SplashScreen from "expo-splash-screen";
 
 import Login from "./screens/auth/LoginScreen";
 import Register from "./screens/auth/RegistrationScreen";
-import Home from "./screens/mainScrens/home/Home";
+import Home from "./screens/nestedScreen/home/Home";
 import { styles } from "./screens/auth/auth.styled";
+import MapScreen from "./screens/nestedScreen/mapScreen/MapScreen";
+import CommentsScreen from "./screens/nestedScreen/commentsScreen/CommentsScreen";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -50,6 +52,16 @@ export default () => {
             component={Home}
             options={{ headerShown: false }}
           />
+          {/* <MainStack.Screen
+            name="MapScreen"
+            component={MapScreen}
+            options={{ headerShown: true }}
+          /> */}
+          {/* <MainStack.Screen
+            name="CommentsScreen"
+            component={CommentsScreen}
+            options={{ headerShown: true }}
+          /> */}
         </MainStack.Navigator>
       </NavigationContainer>
     </View>

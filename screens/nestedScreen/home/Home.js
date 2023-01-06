@@ -1,13 +1,13 @@
 import React from "react";
-import { Image, TouchableOpacity, StyleSheet } from "react-native";
+import { Image, TouchableOpacity } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { Ionicons } from "@expo/vector-icons";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import PostsScreen from "../postsScreen/PostsScreen";
-import CreateScreen from "../createPostsScreen/CreatePostsScreen";
-import ProfileScreen from "../profileScreen/ProfileScreen";
+import PostsScreen from "../../mainScrens/postsScreen/PostsScreen";
+import CreateScreen from "../../mainScrens/createPostsScreen/CreatePostsScreen";
+import ProfileScreen from "../../mainScrens/profileScreen/ProfileScreen";
 import { styles } from "./Home.styled";
 
 const MainTab = createBottomTabNavigator();

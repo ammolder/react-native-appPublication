@@ -7,12 +7,24 @@ export const styles = StyleSheet.create({
     paddingTop: 32,
     paddingHorizontal: 16,
   },
-  backgroundPhoto: {
+  camera: {
     position: "relative",
     width: "100%",
     height: 240,
     marginBottom: 8,
     backgroundColor: "#F6F6F6",
+    borderRadius: 20,
+  },
+  photoContainer: {
+    position: "absolute",
+    top: 0,
+    left: 10,
+    borderWidth: 1,
+    borderColor: "red",
+  },
+  photo: {
+    width: "100%",
+    height: 240,
     borderRadius: 20,
   },
   photoPub: {
@@ -48,10 +60,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: "center",
     fontFamily: "Roboto-Regular",
-    backgroundColor: "#F6F6F6",
     borderRadius: 100,
   },
-  btnTitle: {
-    color: "#BDBDBD",
-  },
+  btnTitle: {},
 });
